@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .calculator{
+            height: 510px;
+            width: 360px;
+            background: black;
+            margin: 0 auto;
+            margin-top: 90px;
+        }
+        .calculator .screen{
+            height: 55px;
+            background:gray;
+            color: white;
+            font-size: 35px;
+        }
+        .calculator .button{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .calculator .button button{
+            height: 80px;
+            width: 80px;
+            background: #111;
+            color: white;
+            border-radius: 50%;
+            font-size: 25px;
+        }
+        .calculator .button button:nth-child(4){
+          background: yellowgreen;
+        }
+         .calculator .button button:nth-child(8){
+          background: yellowgreen;
+        }
+         .calculator .button button:nth-child(12){
+          background: yellowgreen;
+        }
+         .calculator .button button:nth-child(16){
+          background: yellowgreen;
+        }
+         .calculator .button button:nth-child(20){
+          background: yellowgreen;
+        }
+         .calculator .button button:nth-child(1){
+          background:gray;
+        }
+         .calculator .button button:nth-child(2){
+          background: gray;
+        }
+         .calculator .button button:nth-child(3){
+          background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="screen"></div>
+        <div class="button">
+          <button onclick="Clear()">AC</button>
+          <button onclick="hell('.')">.</button>
+          <button onclick="hell('%')">%</button>
+          <button onclick="hell('*')">*</button>
+          <button onclick="hell(7)">7</button>
+          <button onclick="hell(8)">8</button>
+          <button onclick="hell(9)">9</button>
+          <button onclick="hell('-')">-</button>
+          <button onclick="hell(4)">4</button>
+          <button onclick="hell(5)">5</button>
+          <button onclick="hell(6)">6</button>
+          <button onclick="hell('+')">+</button>
+          <button onclick="hell(1)">1</button>
+          <button onclick="hell(2)">2</button>
+          <button onclick="hell(3)">3</button>
+          <button onclick="hell('/')">/</button>
+          <button onclick="hell('00')">00</button>
+          <button onclick="hell('0')">0</button>
+          <button onclick="hell('.')">.</button>
+          <button onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        var screen = document.querySelector('.screen')
+        function hell(a){
+        screen.innerText += a
+        var audio=new Audio('click.mp3').play()
+        }
+        function calculate(){
+            screen.innerText=eval(screen.innerText)
+        var audio=new Audio('click.mp3').play()
+        }
+        function Clear(){
+            screen.innerText=''
+        var audio=new Audio('click.mp3').play()
+        }
+        document.addEventListener('keydown',function(k){
+             if (k.key == '1'){
+        screen.innerText +=1
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '2'){
+        screen.innerText +=2
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '3'){
+        screen.innerText +=3
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '4'){
+        screen.innerText +=4
+        var audio=new Audio('click.mp3').play()
+        }
+         if (k.key == '5'){
+        screen.innerText +=5
+        var audio=new Audio('click.mp3').play()
+      } 
+      if (k.key == '6'){
+        screen.innerText +=6
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '7'){
+        screen.innerText +=7
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '8'){
+        screen.innerText +=8
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '9'){
+        screen.innerText +=9
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '0'){
+        screen.innerText +=0
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '-'){
+        screen.innerText +='-'
+        var audio=new Audio('click.mp3').play()
+      } 
+      if (k.key == '+'){
+        screen.innerText +='+'
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '/'){
+        screen.innerText +='/'
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '*'){
+        screen.innerText +='*'
+        var audio=new Audio('click.mp3').play()
+      } 
+      if (k.key == '%'){
+        screen.innerText +='%'
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == '.'){
+        screen.innerText +='.'
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == "Enter") {
+      screen.innerText = eval(screen.innerText)
+        var audio=new Audio('click.mp3').play()
+      }
+       if (k.key == "Enter") {
+      screen.innerText = eval(screen.innerText)
+        var audio=new Audio('click.mp3').play()
+      }
+        })
+    </script>
+</body>
+</html>
